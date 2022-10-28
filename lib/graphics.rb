@@ -21,7 +21,6 @@ module Graphics
     tittle << '             ▌ ▌       ╚═╝  ▐ ▐  '
     tittle << '             ▌ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀ ▐  '
     tittle << '             ▙▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▟  '
-    tittle << '                                 '
     tittle
   end
 
