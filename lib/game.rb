@@ -30,6 +30,11 @@ class Game
         File.delete('./assets/saved_game.yml')
         break
       end
+      if @logic.full_board?(@board.return)
+        @display.print_board(@board.return, ['Draw!'])
+        File.delete('./assets/saved_game.yml')
+        break
+      end
       File.write('./assets/saved_game.yml', YAML.dump(self))
       next_turn
     end

@@ -1,7 +1,7 @@
 module ConsolePrinter
   def print_message(messages, full_size, bg_color = 'bg_blue', inner_bg = 'bg_cyan', use_frame: false)
-    frame = getting_frame('+', use_frame, full_size, inner_bg)
-    symbol = getting_symbol('+', use_frame, inner_bg)
+    frame = getting_frame('╳', use_frame, full_size, inner_bg)
+    symbol = getting_symbol('╳', use_frame, inner_bg)
     margin = ' ' * ((full_size / 20) + 1)
     3.times { puts margin + (' ' * full_size).send(bg_color) }
     2.times { puts margin + '           '.send(bg_color) + frame + '           '.send(bg_color) }
