@@ -46,27 +46,27 @@ class Logic
   def diagonal_win?(board)
     board.each_with_index do |row, i|
       row.each_with_index do |_, j|
-        return true if diagonal_win_helper1(board, i, j) || diagonal_win_helper2(board, i, j)
+        return true if diagonal_win_helper(board, i, j)
       end
     end
     false
   end
 
-  def diagonal_win_helper1(board, index_i, index_j)
+  def diagonal_win_helper(board, index_i, index_j)
+    return false if index_i > 2 || index_j > 3
+
     a = board[index_i][index_j]
     b = board[index_i + 1][index_j + 1]
     c = board[index_i + 2][index_j + 2]
     d = board[index_i + 3][index_j + 3]
+
     return true if a == b && b == c && c == d && a != 0
 
-    false
-  end
+    a = board[index_i][index_j + 3]
+    b = board[index_i + 1][index_j + 2]
+    c = board[index_i + 2][index_j + 1]
+    d = board[index_i + 3][index_j]
 
-  def diagonal_win_helper2(board, index_i, index_j)
-    a = board[index_i][index_j]
-    b = board[index_i + 1][index_j - 1]
-    c = board[index_i + 2][index_j - 2]
-    d = board[index_i + 3][index_j - 3]
     return true if a == b && b == c && c == d && a != 0
 
     false
