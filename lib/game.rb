@@ -15,7 +15,6 @@ class Game
   def next_turn
     @turn += 1
     @turn = 1 if @turn > 2
-    File.write('./assets/saved_game.yml', YAML.dump(self))
     @turn
   end
 
@@ -31,6 +30,7 @@ class Game
         File.delete('./assets/saved_game.yml')
         break
       end
+      File.write('./assets/saved_game.yml', YAML.dump(self))
       next_turn
     end
   end
