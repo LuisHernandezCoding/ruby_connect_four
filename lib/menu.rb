@@ -9,6 +9,7 @@ class Menu
 
   def print_menu(title, options)
     screen = compound_menu(title, options)
+    system('clear') or system('cls')
     print_message(screen, 100, 'bg_dark gray', 'bg_blue', use_frame: true)
     print_input_field(100, 'bg_black', '>')
   end
