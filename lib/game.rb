@@ -27,8 +27,10 @@ class Game
       @display.print_board(@board.return)
       if @logic.win?(@board.return)
         @display.print_board(@board.return, ["Player #{@turn} wins!"])
+        File.delete('./assets/saved_game.yml')
         break
       end
+      File.write('./assets/saved_game.yml', YAML.dump(self))
       next_turn
     end
   end
