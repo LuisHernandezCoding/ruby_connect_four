@@ -20,7 +20,7 @@ class Game
 
   def play
     loop do
-      messages = ["Player #{@turn}'s turn, choose a column: ", 'Enter a number between 1 and 7']
+      messages = ['', "Player #{@turn}'s turn, choose a column: ", 'Enter a number between 1 and 7']
       @display.print_board(@board.return, messages)
       column = getting_user_input
       @board.update(column, @turn)
