@@ -55,6 +55,10 @@ class Logic
   def diagonal_win_helper(board, index_i, index_j)
     return false if index_i > 2 || index_j > 3
 
+    diagonal_win_helper_left(board, index_i, index_j) || diagonal_win_helper_right(board, index_i, index_j)
+  end
+
+  def diagonal_win_helper_left(board, index_i, index_j)
     a = board[index_i][index_j]
     b = board[index_i + 1][index_j + 1]
     c = board[index_i + 2][index_j + 2]
@@ -62,6 +66,10 @@ class Logic
 
     return true if a == b && b == c && c == d && a != 0
 
+    false
+  end
+
+  def diagonal_win_helper_right(board, index_i, index_j)
     a = board[index_i][index_j + 3]
     b = board[index_i + 1][index_j + 2]
     c = board[index_i + 2][index_j + 1]
