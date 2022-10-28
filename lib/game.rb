@@ -15,6 +15,7 @@ class Game
   def next_turn
     @turn += 1
     @turn = 1 if @turn > 2
+    File.write('./assets/saved_game.yml', YAML.dump(self))
     @turn
   end
 
@@ -27,6 +28,7 @@ class Game
       @display.print_board(@board.return)
       if @logic.win?(@board.return)
         @display.print_board(@board.return, ["Player #{@turn} wins!"])
+        File.delete('./assets/saved_game.yml')
         break
       end
       next_turn
