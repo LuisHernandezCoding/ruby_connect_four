@@ -15,7 +15,8 @@ describe Game do
         expect(game.turn).to eql(1)
       end
       it 'should return 2' do
-        expect(game.next_turn).to eql(2)
+        game.next_turn
+        expect(game.turn).to eql(2)
       end
     end
     describe 'when the turn is 2' do
