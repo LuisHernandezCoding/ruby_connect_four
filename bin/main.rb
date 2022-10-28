@@ -1,4 +1,4 @@
-require_relative '../lib/game'
+require_relative '../lib/menu'
 
-game = Game.new
-game.play
+menu = Menu.new
+menu.main_menu
