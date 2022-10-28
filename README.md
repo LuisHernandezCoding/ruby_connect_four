@@ -6,8 +6,10 @@ In this project, i built a Connect 4 game that can be executed from the console,
 
 > Extra: It autosaves every turn and you can load the game from the main menu
 
-![Hangman Preview](assets/Menu_Preview.png)
-![Hangman Preview](assets/Game_preview.png)
+![Menu Preview](assets/Menu_Preview.png)
+> Menu preview
+![Game Preview](assets/Game_preview.png)
+> Game preview
 
 #### Definition
 > 'Connect 4 its a two-player connection game in which the players take turns dropping colored discs from the top into a seven-column, six-row vertically suspended grid. The pieces fall straight down, occupying the next available space within the column. The object of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs. Connect Four is a solved game. The first player can always win by playing the right moves.'
