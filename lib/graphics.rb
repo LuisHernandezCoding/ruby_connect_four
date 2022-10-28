@@ -10,7 +10,7 @@ module Graphics
     tittle << '           ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║        ██║              '
     tittle << '           ╚██████╗╚██████╔╝██║ ╚████║███████╗╚██████╗   ██║              '
     tittle << '            ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═╝              '
-    tittle << '           ▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜      By: @luishernandezcoding               '
+    tittle << '           ▛▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▜      By: @LuisHernandezCoding               '
     tittle << '           ▌ ▛▀▀▀▀▀▀▀▀▀▀▀▀▜ ▐    '
     tittle << '           ▌ ▌  ██╗  ██╗  ▐ ▐    '
     tittle << '           ▌ ▌  ██║  ██║  ▐ ▐    '

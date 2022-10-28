@@ -2,13 +2,17 @@
 
 In this project, i built a Connect 4 game that can be executed from the console, The objective of Connect Four is to be the first player to form a horizontal, vertical, or diagonal line of four of one's own discs.
 
+######
+
+> Extra: It autosaves every turn and you can load the game from the main menu
+
 ![Hangman Preview](assets/Menu_Preview.png)
 ![Hangman Preview](assets/Game_preview.png)
 
-###### Definition
+#### Definition
 > 'Connect 4 its a two-player connection game in which the players take turns dropping colored discs from the top into a seven-column, six-row vertically suspended grid. The pieces fall straight down, occupying the next available space within the column. The object of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own discs. Connect Four is a solved game. The first player can always win by playing the right moves.'
 
-###### Behavior
+#### Behavior
 - The game prompts the first player to choose a column.
 - The game prompts the second player to choose a column.
 - The game displays the board after every move.
@@ -19,13 +23,13 @@ In this project, i built a Connect 4 game that can be executed from the console,
 - The game displays the winner if a player connects four discs vertically.
 - The game displays the winner if a player connects four discs horizontally.
 
-## Learning Goals / Areas of Focus
+### Learning Goals / Areas of Focus
 
 - Test Driven Development (TDD)
 - Object Oriented Programming (OOP)
 - Data Structures & Algorithms
 
-## Extra Learning Goals / Areas of Focus
+### Extra Learning Goals / Areas of Focus
 
 - Use Ruby to build a command line application
 - Practice breaking a program into logical components
@@ -45,11 +49,11 @@ In this project, i built a Connect 4 game that can be executed from the console,
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
+#### Prerequisites
 
 - Ruby v 3.1.2p20
 
-### Setup
+#### Setup
 
 - Make sure you have Ruby installed on your machine
 - Clone this repository with
@@ -57,7 +61,7 @@ To get a local copy up and running follow these simple example steps.
 git clone git@github.com:LuisHernandezCoding/ruby_connect_four.git
 ```
 
-### Usage
+#### Usage
 
 - Navigate with your console to the project folder
 - Run the program on your local machine with
@@ -66,7 +70,7 @@ git clone git@github.com:LuisHernandezCoding/ruby_connect_four.git
 ruby bin/main.rb
 ```
 
-### Run tests
+#### Run tests
 
 - Navigate with your console to the project folder
 - Run the program on your local machine with
@@ -75,7 +79,7 @@ ruby bin/main.rb
 rspec
 ```
 
-## Authors
+# Author
 
 👤 **Luis Hernandez**
 
