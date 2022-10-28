@@ -1,5 +1,6 @@
 require_relative '../lib/board'
 require_relative '../lib/logic'
+require_relative '../lib/display'
 
 class Game
   attr_reader :turn
@@ -7,6 +8,7 @@ class Game
   def initialize
     @board = Board.new
     @logic = Logic.new
+    @display = Display.new
     @turn = 1
   end
 
@@ -17,15 +19,14 @@ class Game
   end
 
   def play
-    print_board
     loop do
-      puts "Player #{@turn} turn"
-      puts 'Enter a column number between 1 and 7'
+      messages = ["Player #{@turn}'s turn, choose a column: ", 'Enter a number between 1 and 7']
+      @display.print_board(@board.return, messages)
       column = getting_user_input
       @board.update(column, @turn)
-      print_board
+      @display.print_board(@board.return)
       if @logic.win?(@board.return)
-        puts "Player #{@turn} won!"
+        @display.print_board(@board.return, ["Player #{@turn} wins!"])
         break
       end
       next_turn
@@ -37,14 +38,8 @@ class Game
       column = gets.chomp.to_i
       return column - 1 if column.between?(1, 7) && @logic.valid_column?(@board.return, column - 1)
 
-      puts 'Invalid input, try again'
-    end
-  end
-
-  def print_board
-    system 'clear' or system 'cls'
-    @board.return.reverse.each do |row|
-      puts row.join(' ')
+      messages = ["Player #{@turn}'s Invalid input, try again", 'Enter a number between 1 and 7']
+      @display.print_board(@board.return, messages)
     end
   end
 end
